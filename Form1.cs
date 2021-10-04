@@ -64,9 +64,6 @@ namespace WinFormsApp1
             LoadListboxesintoPowerballClass();
 
 
-
-
-
             //May need be removed soon--------------------
             int[] intMultipliers = { 0,0,0,0,0};
 
@@ -97,10 +94,8 @@ namespace WinFormsApp1
             //---------------------------------------
 
 
-
             //Displays howmany drawings theres been
             lblTotalDrawings.Text = "Total drawings count: " + pb.DrawingsCount().ToString();
-
 
 
             //show multipliers 
@@ -120,37 +115,25 @@ namespace WinFormsApp1
 
             //Ball info outputs
             SendToOutputBox("===========BALL INFO=========================");
-
             SendToOutputBox("Balls that have been drawn 10 times are " + pb.GetBallsByDrawsCount(10));
-            SendToOutputBox("Balls that have been drawn 9 are times " + pb.GetBallsByDrawsCount(9));
-            SendToOutputBox("Balls that have been drawn 8 are times " + pb.GetBallsByDrawsCount(8));
-            SendToOutputBox("Balls that have been drawn 7 are times " + pb.GetBallsByDrawsCount(7));
-            SendToOutputBox("Balls that have been drawn 6 are times " + pb.GetBallsByDrawsCount(6));
-            SendToOutputBox("Balls that have been drawn 5 are times " + pb.GetBallsByDrawsCount(5));
-            SendToOutputBox("Balls that have been drawn 4 are times " + pb.GetBallsByDrawsCount(4));
-            SendToOutputBox("Balls that have been drawn 3 are times " + pb.GetBallsByDrawsCount(3));
-            SendToOutputBox("Balls that have been drawn 2 are times " + pb.GetBallsByDrawsCount(2));
-            SendToOutputBox("Balls that have been drawn 1 are times " + pb.GetBallsByDrawsCount(1));
+            SendToOutputBox("Balls that have been drawn 9 times are " + pb.GetBallsByDrawsCount(9));
+            SendToOutputBox("Balls that have been drawn 8 times are " + pb.GetBallsByDrawsCount(8));
+            SendToOutputBox("Balls that have been drawn 7 times are " + pb.GetBallsByDrawsCount(7));
+            SendToOutputBox("Balls that have been drawn 6 times are " + pb.GetBallsByDrawsCount(6));
+            SendToOutputBox("Balls that have been drawn 5 times are " + pb.GetBallsByDrawsCount(5));
+            SendToOutputBox("Balls that have been drawn 4 times are " + pb.GetBallsByDrawsCount(4));
+            SendToOutputBox("Balls that have been drawn 3 times are " + pb.GetBallsByDrawsCount(3));
+            SendToOutputBox("Balls that have been drawn 2 times are " + pb.GetBallsByDrawsCount(2));
+            SendToOutputBox("Balls that have been drawn 1 times are " + pb.GetBallsByDrawsCount(1));
             SendToOutputBox("Ball or balls that never been drawn are " + pb.GetBallsByDrawsCount(0));
 
             //Powertball info outputs
             SendToOutputBox("===========POWERBALL INFO====================");
-            SendToOutputBox("Powerballs that have been drawn 4 are times " + pb.GetPowerballsByDrawsCount(4));
-            SendToOutputBox("Powerballs that have been drawn 3 are times " + pb.GetPowerballsByDrawsCount(3));
-            SendToOutputBox("Powerballs that have been drawn 2 are times " + pb.GetPowerballsByDrawsCount(2));
-            SendToOutputBox("Powerballs that have been drawn 1 are times " + pb.GetPowerballsByDrawsCount(1));
+            SendToOutputBox("Powerballs that have been drawn 4 times are " + pb.GetPowerballsByDrawsCount(4));
+            SendToOutputBox("Powerballs that have been drawn 3 times are " + pb.GetPowerballsByDrawsCount(3));
+            SendToOutputBox("Powerballs that have been drawn 2 times are " + pb.GetPowerballsByDrawsCount(2));
+            SendToOutputBox("Powerballs that have been drawn 1 times are " + pb.GetPowerballsByDrawsCount(1));
             SendToOutputBox("PowerBalls that have never been drawn are " + pb.GetPowerballsByDrawsCount(0));
-
-
-
-
-
-            //currently working on
-            //MessageBox.Show(pb.MostCommonPickedBalls());
-
-
-
-
 
         }
 
@@ -184,6 +167,13 @@ namespace WinFormsApp1
         {
             int intTimes = int.Parse(txtBallDrawed.Text);
             MessageBox.Show(pb.NumberOfTimesBallHasBeenDrawn(intTimes).ToString());
+        }
+
+
+        private void cmdGenerate_Click(object sender, EventArgs e)
+        {
+            Generate g = new Generate();
+            g.Show();
         }
     }
 }

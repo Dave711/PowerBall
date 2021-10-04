@@ -49,6 +49,7 @@ namespace WinFormsApp1
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.txtBallDrawed = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmdGenerate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,7 +284,7 @@ namespace WinFormsApp1
             // lblTotalDrawings
             // 
             this.lblTotalDrawings.AutoSize = true;
-            this.lblTotalDrawings.Location = new System.Drawing.Point(595, 110);
+            this.lblTotalDrawings.Location = new System.Drawing.Point(565, 59);
             this.lblTotalDrawings.Name = "lblTotalDrawings";
             this.lblTotalDrawings.Size = new System.Drawing.Size(180, 25);
             this.lblTotalDrawings.TabIndex = 6;
@@ -382,11 +383,11 @@ namespace WinFormsApp1
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(542, 368);
+            this.txtOutput.Location = new System.Drawing.Point(542, 274);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOutput.Size = new System.Drawing.Size(897, 379);
+            this.txtOutput.Size = new System.Drawing.Size(897, 473);
             this.txtOutput.TabIndex = 17;
             // 
             // txtBallDrawed
@@ -399,7 +400,7 @@ namespace WinFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1018, 59);
+            this.button1.Location = new System.Drawing.Point(992, 51);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 72);
             this.button1.TabIndex = 24;
@@ -407,11 +408,22 @@ namespace WinFormsApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cmdGenerate
+            // 
+            this.cmdGenerate.Location = new System.Drawing.Point(597, 144);
+            this.cmdGenerate.Name = "cmdGenerate";
+            this.cmdGenerate.Size = new System.Drawing.Size(170, 34);
+            this.cmdGenerate.TabIndex = 25;
+            this.cmdGenerate.Text = "Generate Drawing";
+            this.cmdGenerate.UseVisualStyleBackColor = true;
+            this.cmdGenerate.Click += new System.EventHandler(this.cmdGenerate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 798);
+            this.Controls.Add(this.cmdGenerate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBallDrawed);
             this.Controls.Add(this.txtOutput);
@@ -459,6 +471,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.TextBox txtBallDrawed;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdGenerate;
     }
 }
 
