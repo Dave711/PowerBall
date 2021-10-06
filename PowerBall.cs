@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
 
 namespace WinFormsApp1
 {
@@ -134,7 +131,7 @@ namespace WinFormsApp1
 
             int intHighestCount = 0;
             string strBalls = "";
-            for (int i = 1; i < 69;  i++)
+            for (int i = 1; i < 69; i++)
             {
                 if (intHighestCount < this.NumberOfTimesBallHasBeenDrawn(i))
                 {
@@ -146,15 +143,15 @@ namespace WinFormsApp1
             {
                 if (this.NumberOfTimesBallHasBeenDrawn(i) == intHighestCount)
                 {
-                    if (strBalls != "") 
+                    if (strBalls != "")
                     {
                         strBalls = i.ToString();
                     }
                     else
-                    { 
-                        strBalls = strBalls + ", " + i.ToString(); 
+                    {
+                        strBalls = strBalls + ", " + i.ToString();
                     }
-                    
+
                 }
             }
 
@@ -170,7 +167,7 @@ namespace WinFormsApp1
 
 
 
-        
+
 
 
 
@@ -217,5 +214,5 @@ namespace WinFormsApp1
 
 
 
-    
+
 }

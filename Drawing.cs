@@ -19,6 +19,13 @@ namespace WinFormsApp1
 
         public Drawing()
         {
+            this.Ball1 = new Ball();
+            this.Ball2 = new Ball();
+            this.Ball3 = new Ball();
+            this.Ball4 = new Ball();
+            this.Ball5 = new Ball();
+            this.PowerBall = new Ball();
+            this.Multiplier = 0;
         }
 
         public Drawing(Ball ball1, Ball ball2, Ball ball3, Ball ball4, Ball ball5, Ball powerball, int multiplier)

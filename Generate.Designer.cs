@@ -37,6 +37,10 @@ namespace WinFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblP = new System.Windows.Forms.Label();
+            this.txtExclude = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtExcludePowerBall = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,11 +141,50 @@ namespace WinFormsApp1
             this.lblP.Text = "00";
             this.lblP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtExclude
+            // 
+            this.txtExclude.Location = new System.Drawing.Point(883, 303);
+            this.txtExclude.Name = "txtExclude";
+            this.txtExclude.Size = new System.Drawing.Size(631, 31);
+            this.txtExclude.TabIndex = 8;
+            this.txtExclude.Text = "1,2,3,4,5";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(779, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(469, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Exclude numbers (Use a comma \",\" as numbers seperator)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(798, 377);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Exclude Powerball:";
+            // 
+            // txtExcludePowerBall
+            // 
+            this.txtExcludePowerBall.Location = new System.Drawing.Point(960, 371);
+            this.txtExcludePowerBall.Name = "txtExcludePowerBall";
+            this.txtExcludePowerBall.Size = new System.Drawing.Size(583, 31);
+            this.txtExcludePowerBall.TabIndex = 11;
+            this.txtExcludePowerBall.Text = "1, 4, 10, 11, 14, 16, 17, 19, 25";
+            this.txtExcludePowerBall.TextChanged += new System.EventHandler(this.txtExcludePowerBall_TextChanged);
+            // 
             // Generate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 761);
+            this.ClientSize = new System.Drawing.Size(1618, 761);
+            this.Controls.Add(this.txtExcludePowerBall);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtExclude);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblB5);
@@ -151,6 +194,7 @@ namespace WinFormsApp1
             this.Controls.Add(this.lblB1);
             this.Name = "Generate";
             this.Text = "Generate";
+            this.Load += new System.EventHandler(this.Generate_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -168,5 +212,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblP;
+        private System.Windows.Forms.TextBox txtExclude;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtExcludePowerBall;
     }
 }

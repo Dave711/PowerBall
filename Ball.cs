@@ -8,6 +8,11 @@ namespace WinFormsApp1
     { 
         public int Number { get; set; }
 
+        public Ball()
+        {
+            this.Number = 0;
+        }
+
         public Ball(int number)
         {
             this.Number = number;
